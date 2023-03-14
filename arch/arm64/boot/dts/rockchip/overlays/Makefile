@@ -38,7 +38,8 @@ dtb-$(CONFIG_CLK_RK3399) += \
 	rock-4-raspi-7inch-touchscreen.dtbo \
 	rock-4-rpi-camera-v1_3.dtbo \
 	rock-4-rpi-camera-v2.dtbo \
-	rock-4c-plus-raspi-7inch-touchscreen.dtbo
+	rock-4c-plus-raspi-7inch-touchscreen.dtbo \
+	rock-4-red-led.dtbo
 
 dtb-$(CONFIG_CPU_RK3399) += \
 	rock-4c-plus-radxa-display-8hd.dtbo \
