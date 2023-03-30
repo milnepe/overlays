@@ -3,11 +3,11 @@
 
 / {
 	metadata {
-		title = "Enable FIQ Debugger on UART3-M0";
+		title = "Enable FIQ Debugger on UART4-M1";
 		compatible = "radxa,rock-3c";
 		category = "misc";
-		exclusive = "GPIO1_A0", "GPIO1_A1";
-		description = "Enable FIQ Debugger on UART3-M0.";
+		exclusive = "GPIO3_B1", "GPIO3_B2";
+		description = "Enable FIQ Debugger on UART4-M1.\nOn Radxa ROCK 3C this is on pin 16 and pin 18.";
 	};
 
 	fragment@0 {
@@ -15,14 +15,14 @@
 
 		__overlay__ {
 			status = "okay";
-			rockchip,serial-id = <3>;
+			rockchip,serial-id = <4>;
 			pinctrl-names = "default";
-			pinctrl-0 = <&uart3m0_xfer>;
+			pinctrl-0 = <&uart4m1_xfer>;
 		};
 	};
 
 	fragment@1 {
-		target = <&uart3>;
+		target = <&uart4>;
 
 		__overlay__ {
 			status = "disabled";
