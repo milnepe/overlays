@@ -9,6 +9,6 @@
 */
 
 &{/pwm0} {
-    status = "okay"
+    status = "okay";
 };
 
