@@ -29,7 +29,7 @@
                 cooling-maps {
                 map0 {
 	                    trip = <&cpu_alert0>;
-	                    cooling-device = <&fan0 0 3>;
+	                    cooling-device = <&fan0 0 1>;
                     };
                 };        
             };
