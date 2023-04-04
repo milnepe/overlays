@@ -12,3 +12,10 @@
     status = "okay";
 };
 
+fan0: pwm-fan {
+	compatible = "pwm-fan";
+	#cooling-cells = <2>;
+	pwms = <&pwm 0 4000 0>;
+	cooling-levels = <0 102 170 230>;
+};
+
