@@ -1,0 +1,14 @@
+/dts-v1/;						
+/plugin/;						
+
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/pinctrl/rockchip.h>
+
+/* 	Add an external PWM fan to GPIO pin-11 GPIO4_C2	 (gpio-146) on
+	ROCK 4SE & ROCK 4C+ boards
+*/
+
+&{/pwm0} {
+    status = "okay"
+};
+
