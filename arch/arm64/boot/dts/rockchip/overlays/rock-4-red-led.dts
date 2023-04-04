@@ -15,7 +15,7 @@
 	 gpio-153 (                    |vcc5v0-host-regulato) out hi                    
 	 gpio-158 (                    |red:heartbeat       ) out lo  
 */
-
+/*
 &{/leds} {
 	led-1 {
 		gpios = <&gpio4 RK_PD6 GPIO_ACTIVE_HIGH>;
@@ -24,4 +24,12 @@
 		linux,default-trigger = "heartbeat";
 	};
 };
-
+*/
+&{/leds} {
+	led-1 {
+		gpios = <&gpio4 RK_PD6 GPIO_ACTIVE_HIGH>;
+		function = LED_FUNCTION_CAPSLOCK;
+		color = <LED_COLOR_ID_RED>;
+		linux,default-trigger = "kbd-capslock";
+	};
+};
