@@ -8,7 +8,7 @@
 	ROCK 4SE & ROCK 4C+ boards
 */
 
-&{/pwm0} {
+&pwm0 {
     status = "okay";
 };
 
