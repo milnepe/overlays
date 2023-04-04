@@ -15,21 +15,30 @@
 	 gpio-153 (                    |vcc5v0-host-regulato) out hi                    
 	 gpio-158 (                    |red:heartbeat       ) out lo  
 */
-/*
+
 &{/leds} {
-	led-1 {
+	led-3 {
 		gpios = <&gpio4 RK_PD6 GPIO_ACTIVE_HIGH>;
 		function = LED_FUNCTION_HEARTBEAT;
 		color = <LED_COLOR_ID_RED>;
 		linux,default-trigger = "heartbeat";
 	};
 };
-*/
+
+/*	
+	LED should appear as red:capslock in /sys/kernel/debug/gpio
+	root@rock-4se:~# cat /sys/kernel/debug/gpio                                     
+	...
+    gpiochip4: GPIOs 128-159, parent: platform/ff790000.gpio4, gpio4:               
+     gpio-153 (                    |vcc5v0-host-regulato) out hi                    
+     gpio-158 (                    |red:capslock        ) out lo  
+
 &{/leds} {
-	led-1 {
+	led-3 {
 		gpios = <&gpio4 RK_PD6 GPIO_ACTIVE_HIGH>;
 		function = LED_FUNCTION_CAPSLOCK;
 		color = <LED_COLOR_ID_RED>;
 		linux,default-trigger = "kbd-capslock";
 	};
 };
+*/
