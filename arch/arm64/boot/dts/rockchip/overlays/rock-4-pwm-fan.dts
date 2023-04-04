@@ -18,19 +18,21 @@
     };
     
     thermal-zones {
-        trips {
-            cpu_alert0: cpu_alert0 {
-                /* millicelsius */
-                temperature = <20000>;
-                hysteresis = <2000>;
-                type = "active";           
-            };
-            cooling-maps {
-            map0 {
-	                trip = <&cpu_alert0>;
-	                cooling-device = <&fan0 0 3>;
+        cpu_thermal: cpu-thermal {
+            trips {
+                cpu_alert0: cpu_alert0 {
+                    /* millicelsius */
+                    temperature = <20000>;
+                    hysteresis = <2000>;
+                    type = "active";           
                 };
-            };        
+                cooling-maps {
+                map0 {
+	                    trip = <&cpu_alert0>;
+	                    cooling-device = <&fan0 0 3>;
+                    };
+                };        
+            };
         };
     };
 };
