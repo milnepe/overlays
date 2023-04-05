@@ -8,13 +8,17 @@
 	ROCK 4SE & ROCK 4C+ boards
 */
 
+&pwm0 {
+    status = "okay";
+};
+
 &{/} {
-    fan0: pwm-fan {
-        compatible = "pwm-fan";
-        #cooling-cells = <2>;
-        pwms = <&pwm0 0 4000 0>;
-        cooling-levels = <0 102 170 255>;
-    };
+        fan0: pwm-fan {
+            compatible = "pwm-fan";
+            #cooling-cells = <2>;
+            pwms = <&pwm0 0 4000 0>;
+            cooling-levels = <0 102 170 255>;
+        };
 };
     
 &cpu_thermal: cpu-thermal {
@@ -30,9 +34,5 @@
             cooling-device = <&fan0 0 1>;
         };       
     };
-};
-
-&pwm0 {
-    status = "okay";
 };
 
