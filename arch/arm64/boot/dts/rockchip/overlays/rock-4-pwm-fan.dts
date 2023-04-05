@@ -16,22 +16,22 @@
         fan0: pwm-fan {
             compatible = "pwm-fan";
             #cooling-cells = <2>;
-            pwms = <&pwm0 0 4000 0>;
-            cooling-levels = <0 102 170 255>;
+            pwms = <&pwm0 0 25000 1>;
+            cooling-levels = <255 255 255 255>;
         };
 };
     
 &cpu_thermal {
     trips {
         cpu_alert0 {
-            temperature = <40000>;
+            temperature = <20000>;
         };
     };
 
     cooling-maps {
         map0 {
             trip = <&cpu_alert0>;
-            cooling-device = <&fan0 0 3>;
+            cooling-device = <&fan0 0 1>;
         };       
     };
 };
