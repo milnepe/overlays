@@ -18,12 +18,12 @@
             pwms = <&pwm0 0 40000 0>;
             cooling-levels = <255 255 255 255 255>;
         };
+        
+        fan_target: fan_target {
+	        temperature = <20000>;
+        };
 };
     
-&fan_target {
-	temperature = <20000>;
-};
-
 &soc_thermal {
 	sustainable-power = <5000>; /* milliwatts */
 	cooling-maps {
