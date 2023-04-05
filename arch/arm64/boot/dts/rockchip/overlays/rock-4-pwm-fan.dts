@@ -21,9 +21,9 @@
         };
 };
     
-&cpu_thermal: cpu-thermal {
+&cpu_thermal {
     trips {
-        cpu_alert0: cpu_alert0 {
+        cpu_alert0 {
             temperature = <40000>;
         };
     };
