@@ -11,19 +11,11 @@
     status = "okay";
 };
 
-&tsadc {
-	/* tshut mode 0:CRU 1:GPIO */
-	rockchip,hw-tshut-mode = <1>;
-	/* tshut polarity 0:LOW 1:HIGH */
-	rockchip,hw-tshut-polarity = <1>;
-	rockchip,hw-tshut-temp = <110000>;
-	status = "okay";
-};
-
 &{/} {
         fan0: pwm-fan {
             compatible = "pwm-fan";
             #cooling-cells = <2>;
+            fan-supply = <&vcc5v0_sys>;            
             pwms = <&pwm0 0 40000 0>;
             cooling-levels = <255 255 255 255 255>;
         };
