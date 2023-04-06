@@ -16,22 +16,17 @@
 	 gpio-158 (                    |red:heartbeat       ) out lo  
 */
 
-&{/leds} {
-	led-3 {
-		gpios = <&gpio4 RK_PD6 GPIO_ACTIVE_HIGH>;
-		function = LED_FUNCTION_HEARTBEAT;
-		color = <LED_COLOR_ID_RED>;
-		linux,default-trigger = "heartbeat";
-		pinctrl-names = "default";
-		pinctrl-0 = <&led_ext>;		
-	};
-};
+&{/} {
+    leds {
+    	compatible = "gpio-leds";
+		status = "okay";
 
-&{/pinctrl} {
-	leds {
-		led_ext: led_ext { /* Label is required here */
-			rockchip,pins = <4 RK_PD6 RK_FUNC_GPIO &pcfg_pull_none>;
-		};
+	    led-3 {
+		    gpios = <&gpio4 RK_PD6 GPIO_ACTIVE_HIGH>;
+		    function = LED_FUNCTION_HEARTBEAT;
+		    color = <LED_COLOR_ID_RED>;
+		    linux,default-trigger = "heartbeat";
+	    };
 	};
 };
 
