@@ -2,6 +2,8 @@
 /plugin/;						
 
 #include <dt-bindings/thermal/thermal.h>
+#include <dt-bindings/interrupt-controller/arm-gic.h>
+#include <dt-bindings/interrupt-controller/irq.h>
 
 /* 	Add an external PWM fan to GPIO pin-11 GPIO4_C2	 (gpio-146) on
 	ROCK 4SE & ROCK 4C+ boards
@@ -12,7 +14,7 @@
 };
 
 &tsadc {
-	interrupts = <GIC_SPI 97 IRQ_TYPE_LEVEL_HIGH 0>;
+	interrupts = <GIC_SPI 97 IRQ_TYPE_LEVEL_HIGH>;
 	rockchip,hw-tshut-mode = <1>;   /* tshut mode 0:CRU 1:GPIO */
 	rockchip,hw-tshut-polarity = <1>;	/* tshut polarity 0:LOW 1:HIGH */
 	rockchip,hw-tshut-temp = <110000>;
