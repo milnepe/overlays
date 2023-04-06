@@ -25,7 +25,7 @@
 };
     
 &soc_thermal {
-	sustainable-power = <5000>; /* milliwatts */
+	/* sustainable-power = <5000>; milliwatts */
 	cooling-maps {
 		map3 {
 			trip = <&fan_target>;
