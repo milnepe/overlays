@@ -42,12 +42,21 @@
 			hysteresis = <2000>;
 			type = "active";
 		};
+		fan_on: fan_on {
+			temperature = <40000>;
+			hysteresis = <2000>;
+			type = "active";
+		};
 	};	
 
 	cooling-maps {
 		map3 {
 			trip = <&fan_target>;
 			cooling-device = <&fan0 0 1>;
+		};
+		map4 {
+			trip = <&fan_on>;
+			cooling-device = <&fan0 1 1>;
 		};
 	};
 };
