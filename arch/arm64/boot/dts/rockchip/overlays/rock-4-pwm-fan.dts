@@ -30,7 +30,7 @@
             #cooling-cells = <2>;
             fan-supply = <&vcc5v0_sys>;            
             pwms = <&pwm0 0 40000 0>;
-            cooling-levels = <255 255 255 255 255>;
+            cooling-levels = <0 255 255 255 255>;
         };
         
         fan_target: fan_target {
