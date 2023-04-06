@@ -11,6 +11,14 @@
     status = "okay";
 };
 
+&tsadc {
+	interrupts = <GIC_SPI 97 IRQ_TYPE_LEVEL_HIGH>;
+	rockchip,hw-tshut-mode = <1>;   /* tshut mode 0:CRU 1:GPIO */
+	rockchip,hw-tshut-polarity = <1>;	/* tshut polarity 0:LOW 1:HIGH */
+	rockchip,hw-tshut-temp = <110000>;
+	status = "okay";
+};
+
 &{/} {
         fan0: pwm-fan {
             compatible = "pwm-fan";
