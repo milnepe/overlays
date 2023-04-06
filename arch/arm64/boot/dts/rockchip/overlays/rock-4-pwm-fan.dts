@@ -30,7 +30,7 @@
             #cooling-cells = <2>;
             fan-supply = <&vcc5v0_sys>;            
             pwms = <&pwm0 0 40000 0>;
-            cooling-levels = <0 255 255 255 255>;
+            cooling-levels = <255 255 255 255 255>;
         };
 };
     
@@ -47,7 +47,7 @@
 	cooling-maps {
 		map3 {
 			trip = <&fan_on>;
-			cooling-device = <&fan0 2 THERMAL_NO_LIMIT>;
+			cooling-device = <&fan0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
 		};
 	};
 };
