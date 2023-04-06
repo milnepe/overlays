@@ -56,7 +56,7 @@
 		};
 		map4 {
 			trip = <&fan_on>;
-			cooling-device = <&fan0 1 1>;
+			cooling-device = <&fan0 1 THERMAL_NO_LIMIT>;
 		};
 	};
 };
